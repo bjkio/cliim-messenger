@@ -1,0 +1,12 @@
+<?php
+
+    /*
+     *
+     * Cliim Messenger
+     * ===============
+     * Instant messaging using CLI
+     *
+     */
+
+    require_once(__DIR__ . '/lib/Cliim.php');
+    new Cliim();
