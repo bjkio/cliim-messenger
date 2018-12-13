@@ -63,7 +63,7 @@
             # init client connector
             $Connector = new Connector(CLIIM_SHARED_TOKEN);
 
-            do {
+            while($Connector->validateCreds($usermx, $userpw)) {
 
                 $Util->clear();
                 echo "Retrieving user data... Please wait.";
@@ -75,7 +75,7 @@
 
                 }
 
-            } while($Connector->validateCreds($usermx, $userpw));
+            }
 
             # write credentials into file
             # file_put_contents(CLIIM_CREDS, $usermx . PHP_EOL . $userpw, FILE_APPEND | LOCK_EX);

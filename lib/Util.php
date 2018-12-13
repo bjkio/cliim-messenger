@@ -31,7 +31,7 @@
 
         public function ping($endpoint) {
 
-            $pingresult = exec("ping $endpoint -n 1");
+            $pingresult = exec("ping $endpoint -c 1");
             $deadoralive = strpos("Request timed out.", $pingresult);
 
             if ($deadoralive == false)
